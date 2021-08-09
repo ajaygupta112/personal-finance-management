@@ -93,5 +93,19 @@ public class Service {
 		
 		return user;
 	}
+	boolean delete(String email) throws SQLException
+	{
+		if(!userExists(email)) {
+			return false;
+		}
+		String query = "delete from user where email='" + email + "'";
+		Statement stmt = con.createStatement();
+		int res = stmt.executeUpdate(query);
+		if(res==0)
+				return false;
+		else
+			return true;
+		
+	}
 	
 }

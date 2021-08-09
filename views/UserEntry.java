@@ -9,6 +9,7 @@ public class UserEntry
     {
         while(true)
         {
+        	System.out.print(System.currentTimeMillis());
             System.out.println("*********Welcome to the Personal Finance Management System***********");
             System.out.println();
             System.out.println("Select one of the options :");
